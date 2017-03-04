@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:stretchColumns="0"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+    <TableRow
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:id="@+id/touxiangRow"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+
+            android:gravity="left|center"
+            android:textColor="#000000"
+            android:text="添加头像"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/headImage1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerHorizontal="true"
+            app:civ_border_width="0.5dp"
+            app:civ_border_color="#4a9bec"
+            android:layout_weight="0.87" />
+         
+    </TableRow>
+
+    <View
+        android:layout_height="2px"
+        android:layout_width="fill_parent"
+        android:background="#FF909090"/>
+
+    <TableRow
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:id="@+id/nichengRow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20dp"
+        android:gravity="left|center"
+        android:textColor="#000000"
+        android:text="输入昵称"/>
+
+    <EditText
+
+        android:gravity="right|center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="报上你霸气的名称"
+        android:id="@+id/editNicheng" />
+    </TableRow>
+    <View
+        android:layout_height="2px"
+        android:layout_width="fill_parent"
+        android:background="#FF909090"/>
+
+
+    <TableRow
+        android:background="#ffffff"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:id="@+id/mimaRow"
+        android:showDividers="middle|beginning|end"
+        android:layout_width="match_parent"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:gravity="left|center"
+            android:text="输入密码"/>
+
+        <EditText
+            android:gravity="right|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="记得住的6位数"
+            android:id="@+id/editMima" />
+    </TableRow>
+    <View
+        android:layout_height="2px"
+        android:layout_width="fill_parent"
+        android:background="#FF909090"/>
+    <TableRow
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:id="@+id/ensureRow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:gravity="left|center"
+            android:text="输入密码"/>
+
+        <EditText
+            android:gravity="right|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="确认你的密码"
+            android:id="@+id/editEnsureMima" />
+    </TableRow>
+    <View
+        android:layout_height="2px"
+        android:layout_width="fill_parent"
+        android:background="#FF909090"/>
+
+
+
+        <com.spark.submitbutton.SubmitButton
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="注册"
+            android:layout_gravity="center"
+            android:id="@+id/buttonZhuce"
+            android:textColor="@color/black"
+            app:sub_btn_background="@color/white"
+            app:sub_btn_duration="2000"
+            app:sub_btn_line_color="#f24f52"
+            app:sub_btn_ripple_color="#f24f52"
+            app:sub_btn_tick_color="@color/white"
+
+            android:layout_weight="1.08" />
+
+
+</TableLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:notButton="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@id/linearLayout1"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_awesome_toolbar"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@mipmap/junzi"
+            android:scaleType="centerCrop"
+            android:id="@+id/ivPic"
+            fresco:fadeDuration="400"
+            fresco:failureImage="@drawable/fail"
+            fresco:progressBarImage="@drawable/loading"
+            fresco:failureImageScaleType="fitXY"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+                <TextView android:layout_width="match_parent"
+                    android:id="@+id/tvRContent"
+                    android:gravity="fill_horizontal"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tvRTitle"
+                    android:text="我是内容！！！！！！！！！！我是内容！！！！！！！！！！我是内容！！！！！！！！！！我是内容！！！！！！！！！！我是内容！！！！！！！！！！我是内容！！！！！！！！！！我是内容！！！！！！！！！！我是内容！！！！！！！！！！我是内容！！！！！！！！！！"
+                    android:textSize="18dp">
+
+                </TextView>
+
+                <TextView android:layout_width="match_parent"
+                    android:id="@+id/tvRTitle"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="我是标题！！"
+                    android:textSize="30dp"
+                    android:layout_below="@+id/ivPic"
+                    android:layout_alignParentStart="true"></TextView>
+
+
+            </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:background="#f3f3f3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout1"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <EditText
+
+            android:layout_width="231dp"
+            android:hint="说说我的看法....."
+            android:textSize="15dp"
+            android:background="@drawable/round_text"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:layout_marginLeft="20px"
+            android:ems="10"
+            android:id="@+id/etComment"
+            android:layout_weight="0.24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="0.1"/>
+
+
+        <com.carlos.notificatoinbutton.library.NotificationButton
+            android:paddingLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@drawable/comments"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ibrCom"
+            notButton:circleBgColor="@android:color/holo_red_light"
+
+            notButton:circleSize="6dp"
+
+            notButton:textColor="@android:color/white"
+            android:layout_weight="0.25" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="0.1"/>
+        <com.carlos.notificatoinbutton.library.NotificationButton
+            android:paddingRight="20dp"
+            android:id="@+id/ibrCol"
+            android:layout_width="0dp"
+            android:background="@drawable/favorites"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp"
+            android:layout_below="@+id/my_awesome_toolbar"
+            android:layout_alignParentStart="true"
+            notButton:circleBgColor="@android:color/holo_red_light"
+
+            notButton:circleSize="6dp"
+
+            notButton:textColor="@android:color/white"
+            android:layout_weight="0.25" />
+
+    </LinearLayout>
+</RelativeLayout>

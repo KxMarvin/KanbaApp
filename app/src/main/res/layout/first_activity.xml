@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <io.github.yuweiguocn.lib.squareloading.SquareLoading
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:background="@color/white"
+    app:squareColor="@color/colorAccent"
+    app:squareSize="12dp"
+    app:squareCorner="2dp"
+    app:dividerSize="2dp"
+    app:xCount="4"
+    app:yCount="3"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
+
+    <TextView
+        android:text="大学帅哥美女平台"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f74f67"
+        android:id="@+id/textView4"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_weight="0.42"
+        android:layout_marginBottom="251dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="50dp"
+        android:src="@drawable/kanbaa"
+        android:scaleType="fitCenter"
+        android:id="@+id/imageView"
+        android:layout_weight="0.42"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <Button
+        android:text="登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eetAccount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="88dp"
+        android:id="@+id/bbtLogin" />
+
+    <Button
+        android:text="注册"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="57dp"
+        android:id="@+id/bbtSignUp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="请输入账号"
+        android:ems="10"
+        android:layout_marginTop="33dp"
+        android:id="@+id/eetAccount"
+        android:layout_below="@+id/eetPassword"
+        android:layout_alignStart="@+id/eetPassword" />
+
+    <EditText
+        android:hint="请输入密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/eetPassword"
+        android:layout_marginEnd="54dp"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/my_awesome_toolbar"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

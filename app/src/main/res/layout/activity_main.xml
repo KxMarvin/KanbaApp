@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+
+        android:layout_marginBottom="32dp" />
+
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/bs"
+        android:id="@+id/h1"
+        android:layout_below="@+id/my_awesome_toolbar"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:singleLine="true"
+            android:hint="账号"
+            android:id="@+id/editText11"
+            android:textColor="#333"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/security3"
+        android:layout_above="@+id/btLogin11"
+         android:layout_below="@id/h1"
+        android:layout_centerHorizontal="true"
+       >
+
+        <EditText
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText22"
+            android:inputType="textPassword"
+            android:hint="密码"
+            android:textColor="#333"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+    <com.spark.submitbutton.SubmitButton
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:text="注册"
+        android:id="@+id/button2"
+        android:textColor="@color/white"
+        app:sub_btn_background="#4B0082"
+        app:sub_btn_duration="2000"
+        app:sub_btn_line_color="#4B0082"
+        app:sub_btn_ripple_color="#4B0082"
+        app:sub_btn_tick_color="@color/white"
+        android:layout_below="@+id/h1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="108dp" />
+
+    <com.spark.submitbutton.SubmitButton
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:text="登录"
+        android:id="@+id/btLogin11"
+        android:textColor="@color/white"
+        app:sub_btn_background="#4B0082"
+        app:sub_btn_duration="2000"
+        app:sub_btn_line_color="#4B0082"
+        app:sub_btn_ripple_color="#4B0082"
+        app:sub_btn_tick_color="@color/white"
+
+
+        android:layout_marginStart="17dp"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

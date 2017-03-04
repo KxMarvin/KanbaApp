@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:notButton="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="我是内容"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/content"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="我是标题"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/title"
+        android:layout_below="@+id/ivNews"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_height="5dp"
+        android:layout_width="fill_parent"
+        android:background="#FF909090"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:srcCompat="@mipmap/a71ea8d3fd1f41347657fc7a221f95cad1c85e56"
+        android:id="@+id/ivNews"
+        fresco:fadeDuration="400"
+        fresco:failureImage="@drawable/fail"
+        fresco:progressBarImage="@drawable/loading"
+        fresco:failureImageScaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:weightSum="1"
+        android:id="@+id/linearLayout3"
+        android:layout_below="@+id/content">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.08"
+            android:background="#ffffff"
+            android:src="@drawable/comments1"
+            android:id="@+id/ibCom"
+            />
+        <TextView
+            android:text="100"
+            android:gravity="left|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/numCOM"
+            android:layout_weight="0.15"/>
+
+
+        <ImageButton
+            android:src="@drawable/favorites2"
+            android:layout_width="0dp"
+            android:layout_weight="0.08"
+            android:background="#ffffff"
+            android:layout_height="25dp"
+            android:id="@+id/ibCol"
+             />
+        <TextView
+            android:text="100"
+            android:gravity="left|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/numCol"
+            android:layout_weight="0.15"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/linearLayout3"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="5dp"
+        >
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

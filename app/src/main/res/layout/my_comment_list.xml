@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="我是评论1我是评论1我是评论1我是评论1我是评论1我是评论1我是评论1"
+        android:layout_width="match_parent"
+        android:textSize="20dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/itcComment" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/itcComment"
+        android:layout_alignParentStart="true">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/ivcPic"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            fresco:fadeDuration="400"
+            fresco:failureImage="@drawable/fail"
+            fresco:progressBarImage="@drawable/loading"
+            fresco:failureImageScaleType="fitXY"
+            />
+
+        <TextView
+            android:text="Title"
+            android:textSize="25dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:id="@+id/itcTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/ivcPic" />
+
+        <TextView
+            android:text="content"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_below="@id/itcTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/ivcPic"
+            android:id="@+id/itcContent" />
+    </RelativeLayout>
+</RelativeLayout>
